@@ -1,0 +1,26 @@
+{
+  "info": {
+    "name": "Album"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Public": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "photos": {
+      "collection": "photo"
+    }
+  },
+  "connection": "default",
+  "collectionName": "albums"
+}

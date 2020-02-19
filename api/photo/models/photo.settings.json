@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "photos",
+  "info": {
+    "name": "photo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "file": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "datetime": {
+      "type": "datetime",
+      "required": true
+    },
+    "Thumbnail": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}
