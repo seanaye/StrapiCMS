@@ -2,27 +2,29 @@
   "connection": "default",
   "collectionName": "photos",
   "info": {
-    "name": "photo"
+    "name": "Photo"
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "idAttributeType": "uuid"
   },
   "attributes": {
-    "file": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "File": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": true
     },
-    "datetime": {
-      "type": "datetime",
-      "required": true
-    },
-    "Thumbnail": {
-      "model": "file",
-      "via": "related",
-      "plugin": "upload",
+    "metadata": {
+      "type": "component",
+      "repeatable": false,
+      "component": "metadata.photo-metadata",
       "required": true
     }
   }

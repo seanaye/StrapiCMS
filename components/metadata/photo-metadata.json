@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "components_metadata_photo_metadata",
+  "info": {
+    "name": "Photo",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "Shutterspeed": {
+      "type": "string"
+    },
+    "ISO": {
+      "type": "integer"
+    },
+    "Aperture": {
+      "type": "decimal"
+    },
+    "Taken": {
+      "type": "datetime"
+    },
+    "Camera": {
+      "type": "string"
+    },
+    "FocalLength": {
+      "type": "integer"
+    }
+  }
+}

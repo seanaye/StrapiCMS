@@ -1,10 +1,13 @@
 {
+  "connection": "default",
+  "collectionName": "albums",
   "info": {
     "name": "Album"
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "idAttributeType": "uuid"
   },
   "attributes": {
     "Title": {
@@ -20,7 +23,5 @@
     "photos": {
       "collection": "photo"
     }
-  },
-  "connection": "default",
-  "collectionName": "albums"
+  }
 }
