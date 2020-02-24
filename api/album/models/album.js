@@ -4,7 +4,7 @@
  * Lifecycle callbacks for the `photo` model.
  */
 
-const uuid = require('uuid')
+// const uuid = require('uuid')
 
 module.exports = {
   // Before saving a value.
@@ -33,10 +33,9 @@ module.exports = {
 
   // Before creating a value.
   // Fired before an `insert` query.
-  beforeCreate: async (model, attrs, options) => {
-    console.log({model, attrs, options})
-    model.set('id', uuid())
-  },
+  // beforeCreate: async (model, attrs, options) => {
+  //   model.set('id', uuid())
+  // },
 
   // After creating a value.
   // Fired after an `insert` query.

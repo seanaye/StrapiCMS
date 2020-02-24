@@ -1,0 +1,11 @@
+module.exports = {
+  query: 'publicAlbums: [Album]!',
+  resolver: {
+    Query: {
+      publicAlbums: {
+        description: "Return a list of public Albums",
+        resolver: "Album.findPublic"
+      }
+    }
+  }
+}

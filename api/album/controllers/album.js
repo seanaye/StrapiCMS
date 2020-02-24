@@ -5,4 +5,12 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+  async findPublic (ctx) {
+    const res = await strapi.services.album.find(ctx.query)
+    return res.filter((album) => {
+      return album.Public
+    })
+  }
+};
+

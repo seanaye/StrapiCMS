@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/albums_public",
+      "handler": "album.findPublic",
+      "config": {
+        "policies": []   
+      }
+    },
+    {
+      "method": "GET",
       "path": "/albums/count",
       "handler": "album.count",
       "config": {
