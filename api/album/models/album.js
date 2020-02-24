@@ -1,8 +1,10 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `album` model.
+ * Lifecycle callbacks for the `photo` model.
  */
+
+const uuid = require('uuid')
 
 module.exports = {
   // Before saving a value.
@@ -31,7 +33,10 @@ module.exports = {
 
   // Before creating a value.
   // Fired before an `insert` query.
-  // beforeCreate: async (model, attrs, options) => {},
+  beforeCreate: async (model, attrs, options) => {
+    console.log({model, attrs, options})
+    model.set('id', uuid())
+  },
 
   // After creating a value.
   // Fired after an `insert` query.

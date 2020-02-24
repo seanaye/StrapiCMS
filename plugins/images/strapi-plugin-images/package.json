@@ -1,0 +1,78 @@
+{
+  "_from": "strapi-plugin-images",
+  "_id": "strapi-plugin-images@0.0.5",
+  "_inBundle": false,
+  "_integrity": "sha512-Q41p43za4uhPV0OfDLHGLRMlEP0m5jbAaNL28c1OkXF2v5RmrCg4w/q2v2b6M7yrQXinilvp7Jr5loxhIJlb8Q==",
+  "_location": "/strapi-plugin-images",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "strapi-plugin-images",
+    "name": "strapi-plugin-images",
+    "escapedName": "strapi-plugin-images",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/strapi-plugin-images/-/strapi-plugin-images-0.0.5.tgz",
+  "_shasum": "fdc3b7fbddb5075f9eccb858dee6e0294780b0a0",
+  "_spec": "strapi-plugin-images",
+  "_where": "/Users/seanaye/projects/strapiCMS",
+  "author": {
+    "name": "Kristian Froelund"
+  },
+  "bugs": {
+    "url": "https://github.com/Froelund/strapi-plugin-images/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "jimp": "^0.5.4",
+    "lodash": "^4.17.11"
+  },
+  "deprecated": false,
+  "description": "This plugin delivers more image-features to your apis.",
+  "devDependencies": {
+    "strapi-helper-plugin": "3.0.0-alpha.14.3"
+  },
+  "engines": {
+    "node": ">= 9.0.0",
+    "npm": ">= 5.3.0"
+  },
+  "homepage": "https://github.com/Froelund/strapi-plugin-images#readme",
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "Kristian Froelund"
+    }
+  ],
+  "name": "strapi-plugin-images",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Froelund/strapi-plugin-images.git"
+  },
+  "scripts": {
+    "analyze": "node ./node_modules/strapi-helper-plugin/lib/internals/scripts/analyze.js",
+    "analyze:clean": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/rimraf stats.json",
+    "build": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/cross-env NODE_ENV=production node node_modules/strapi-helper-plugin/node_modules/.bin/webpack --config node_modules/strapi-helper-plugin/lib/internals/webpack/webpack.prod.babel.js --color -p --progress",
+    "build:clean": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/rimraf admin/build",
+    "build:dev": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/cross-env NODE_ENV=development node ./node_modules/strapi-helper-plugin/node_modules/.bin/webpack --config node_modules/strapi-helper-plugin/lib/internals/webpack/webpack.prod.babel.js --color -p --progress",
+    "generate": "node ./node_modules/plop/plop.js --plopfile node_modules/strapi-helper-plugin/lib/internals/generators/index.js",
+    "lint": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/eslint --ignore-path .gitignore --ignore-pattern '/admin/build/' --config ./node_modules/strapi-helper-plugin/lib/internals/eslint/.eslintrc.json admin",
+    "preanalyze": "npm run analyze:clean",
+    "prebuild": "npm run build:clean",
+    "prepublishOnly": "npm run build",
+    "prettier": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/prettier --single-quote --trailing-comma es5 --write \"{admin,__{tests,mocks}__}/**/*.js\"",
+    "start": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/cross-env NODE_ENV=development node ./node_modules/strapi-helper-plugin/lib/server",
+    "test": "npm run lint"
+  },
+  "strapi": {
+    "name": "images",
+    "icon": "plug",
+    "description": "Description of images plugin."
+  },
+  "version": "0.0.5"
+}
