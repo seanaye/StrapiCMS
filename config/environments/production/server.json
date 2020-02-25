@@ -1,6 +1,6 @@
 {
-  "host": "${(process.env.NODE_ENV === 'development') ? 'localhost' : 'cms.seanaye.ca'}",
-  "port": "${(process.env.NODE_ENV === 'development') ? 1337 : 443}",
+  "host": "${process.env.APP_HOST || '127.0.0.1'}",
+  "port": "${process.env.NODE_PORT || 1337}",
   "production": true,
   "proxy": {
     "enabled": false

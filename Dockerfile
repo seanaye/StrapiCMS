@@ -1,10 +1,13 @@
-FROM node:current-alpine
+FROM strapi/base
 
 WORKDIR /strapi
 
-ADD . / ./
+COPY ./package.json ./
+# COPY ./yarn.lock ./
 
 RUN npm install
+
+COPY . .
 
 RUN npm install strapi-plugin-images --no-save
 
@@ -14,6 +17,10 @@ RUN rm -rf ./node_modules/strapi-plugins-images
 
 RUN cp -r ./node_modules/strapi-generate-plugin/templates/gitignore ./plugins/images/.gitignore
 
-RUN NODE_ENV=production npm run build
+ENV NODE_ENV production
 
-CMD [ "NODE_ENV=production", "npm", "start" ]
+RUN npm run build
+
+EXPOSE 1337
+
+CMD ["npm", "start"]
