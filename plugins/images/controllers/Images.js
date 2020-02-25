@@ -20,7 +20,8 @@ module.exports = {
       size,
       mode = 'cover',
     } = ctx.query;
-    const entity = await strapi.plugins['upload'].services.upload.fetch({ id: ctx.params._id });
+    // modified to fetch uploads based on hash and not id. To circumvent fetching based on incremental id
+    const entity = (await strapi.plugins['upload'].services.upload.fetchAll({hash: ctx.params._hash, _limit: 1}))[0];
     const {
       mime,
     } = entity;
