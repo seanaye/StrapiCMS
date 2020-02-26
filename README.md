@@ -57,3 +57,12 @@ This example will resize the image to 120px by 120px. This is explicitly configu
 This plugin is basically a strapi implementation of [Jimp](https://github.com/oliver-moran/jimp)
 
 Checkout the docs.
+
+# Important
+
+*Change the data type in generated sqlite3 database* 
+
+Set the PK of table albums__photos to type INT
+This is my current workaround for [Strapi issue #5295](https://github.com/strapi/strapi/issues/5295)
+
+
